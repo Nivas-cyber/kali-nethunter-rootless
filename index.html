@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How to Install Kali Linux on Android Without Root – 2024</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>How to Install Kali Linux on Android Without Root – 2026</h1>
+</header>
+
+<section class="hero">
+  <img src="https://www.kali.org/wallpapers/images/2019.4/kali-dark.png" alt="Kali NetHunter">
+</section>
+
+<section class="content">
+
+  <p>
+    In this article, you don’t need to worry about rooting your device.
+    We can install Kali Linux on non-rooted Android devices using Termux.
+    Follow each step carefully and you’ll have Kali Linux running on your phone.
+  </p>
+
+  <h2>Step 1: Install Termux</h2>
+  <p>
+    Download Termux only from the official GitHub release.
+    Play Store versions are outdated and broken.
+  </p>
+
+  <a class="download-btn"
+     href="https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_arm64-v8a.apk"
+     download>
+     ⬇ Download Termux APK
+  </a>
+
+  <h2>Step 2: Update and Upgrade Termux</h2>
+  <div class="code-box">
+    <button onclick="copyCode(this)">Copy</button>
+    <pre><code>apt update && apt upgrade</code></pre>
+  </div>
+  <p>This updates all Termux packages to avoid installation errors.</p>
+
+  <h2>Step 3: Grant Storage Permission</h2>
+  <div class="code-box">
+    <button onclick="copyCode(this)">Copy</button>
+    <pre><code>termux-setup-storage</code></pre>
+  </div>
+  <p>Allow storage access when prompted.</p>
+
+  <h2>Step 4: Install wget Package</h2>
+  <div class="code-box">
+    <button onclick="copyCode(this)">Copy</button>
+    <pre><code>pkg install wget -y</code></pre>
+  </div>
+  <p>wget is used to download files from the internet.</p>
+
+  <h2>Step 5: Download NetHunter Installer</h2>
+  <div class="code-box">
+    <button onclick="copyCode(this)">Copy</button>
+    <pre><code>wget -O install-nethunter-termux https://offs.ec/2MceZWr</code></pre>
+  </div>
+  <p>This downloads the official Kali NetHunter installer.</p>
+
+  <h2>Step 6: Grant Executable Permission</h2>
+  <div class="code-box">
+    <button onclick="copyCode(this)">Copy</button>
+    <pre><code>chmod +x install-nethunter-termux</code></pre>
+  </div>
+
+  <h2>Step 7: Install NetHunter</h2>
+  <div class="code-box">
+    <button onclick="copyCode(this)">Copy</button>
+    <pre><code>./install-nethunter-termux</code></pre>
+  </div>
+  <p>
+    This step downloads Kali Linux (~2GB).  
+    It may take 10–20 minutes depending on your internet speed.
+  </p>
+
+  <h2>Step 8: Set NetHunter KeX Password</h2>
+  <div class="code-box">
+    <button onclick="copyCode(this)">Copy</button>
+    <pre><code>nethunter kex passwd</code></pre>
+  </div>
+
+  <h2>Step 9: Start NetHunter GUI</h2>
+  <div class="code-box">
+    <button onclick="copyCode(this)">Copy</button>
+    <pre><code>nethunter kex &</code></pre>
+  </div>
+
+  <p>
+    Connect using NetHunter KeX app from Play Store to access the Kali GUI.
+  </p>
+
+</section>
+
+<footer>
+  <p>Made with ❤️ by <strong>cyber_specterz</strong></p>
+  <p>Educational Purpose Only ⚠️</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

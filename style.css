@@ -1,0 +1,243 @@
+/* =========================
+   GLOBAL RESET & VARIABLES
+========================= */
+:root {
+  --bg-main: #0b0f14;
+  --bg-secondary: #0f172a;
+  --bg-card: #111827;
+  --border-color: #1f2937;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent: #00ffcc;
+  --accent-soft: rgba(0, 255, 204, 0.15);
+  --danger: #ef4444;
+  --radius: 14px;
+  --radius-sm: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 40%);
+  color: var(--text-main);
+  line-height: 1.75;
+}
+
+/* =========================
+   HEADER (BLOG STYLE)
+========================= */
+header {
+  padding: 60px 20px 50px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  background: linear-gradient(
+    180deg,
+    rgba(0,255,204,0.08),
+    rgba(0,0,0,0)
+  );
+}
+
+header h1 {
+  max-width: 900px;
+  margin: auto;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+header p {
+  margin-top: 12px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.hero img {
+  max-width: 900px;
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow:
+    0 0 0 1px rgba(0,255,204,0.05),
+    0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   MAIN CONTENT WRAPPER
+========================= */
+.content {
+  max-width: 880px;
+  margin: auto;
+  padding: 20px 20px 80px;
+}
+
+/* Paragraphs */
+.content p {
+  margin: 16px 0;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+.content h2 {
+  margin-top: 60px;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  position: relative;
+  padding-left: 14px;
+}
+
+.content h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 4px;
+  height: 70%;
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+/* =========================
+   DOWNLOAD BUTTON
+========================= */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 10px;
+  padding: 14px 22px;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    #00cfa6
+  );
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  box-shadow:
+    0 10px 30px rgba(0,255,204,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 40px rgba(0,255,204,0.35);
+}
+
+/* =========================
+   CODE BLOCK (HACKER STYLE)
+========================= */
+.code-box {
+  position: relative;
+  margin: 18px 0;
+  padding: 16px 16px 14px;
+  background: linear-gradient(
+    180deg,
+    #020617,
+    #020617
+  );
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.code-box::before {
+  content: "TERMINAL";
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.code-box pre {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.code-box code {
+  color: #a7f3d0;
+  font-size: 0.9rem;
+  white-space: pre;
+}
+
+/* Copy Button */
+.code-box button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent-soft);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.code-box button:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  border-top: 1px solid var(--border-color);
+  padding: 40px 20px;
+  text-align: center;
+  background: #020617;
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 6px 0;
+}
+
+footer strong {
+  color: var(--accent);
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 600px) {
+  .content {
+    padding: 10px 16px 60px;
+  }
+
+  .content h2 {
+    font-size: 1.15rem;
+  }
+
+  .code-box code {
+    font-size: 0.85rem;
+  }
+}
